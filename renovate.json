@@ -17,11 +17,8 @@
       "groupName": "ArmoniK"
     },
     {
-      "matchManagers": [
-        "npm",
-        "nuget",
-        "github-actions",
-        "docker"
+      "matchPackagePatterns": [
+        "*"
       ],
       "groupName": "{{manager}}"
     }
