@@ -19,8 +19,9 @@
     {
       "matchManagers": [
         "npm",
+        "nuget",
         "github-actions",
-        "terraform"
+        "docker"
       ],
       "groupName": "{{manager}}"
     }
