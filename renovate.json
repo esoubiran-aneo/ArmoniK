@@ -20,6 +20,7 @@
       "matchManagers": [
         "npm",
         "github-actions",
+        "terraform"
       ],
       "groupName": "{{manager}}"
     }
