@@ -17,8 +17,10 @@
       "groupName": "ArmoniK"
     },
     {
-      "matchPackagePatterns": [
-        "*"
+      "matchManagers": [
+        "github-actions",
+        "terraform",
+        "npm"
       ],
       "groupName": "{{manager}}"
     }
