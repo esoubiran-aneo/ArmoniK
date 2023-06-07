@@ -9,5 +9,27 @@
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
-  "packageRules": []
+  "packageRules": [
+    {
+      "groupName": "npm packages",
+      "groupSlug": "npm",
+      "matchDatasources": [
+        "npm"
+      ]
+    },
+    {
+      "groupName": "terraform module",
+      "groupSlug": "terraform-module",
+      "matchDatasources": [
+        "terraform-module"
+      ]
+    },
+    {
+      "groupName": "github actions",
+      "groupSlug": "github-actions",
+      "matchDatasources": [
+        "github-tags"
+      ]
+    },
+  ]
 }
