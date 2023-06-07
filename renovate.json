@@ -9,20 +9,5 @@
   "npm": {
     "commitMessageTopic": "{{prettyDepType}} {{depName}}"
   },
-  "packageRules": [
-    {
-      "matchPackageNames": [
-        "^ArmoniK.*"
-      ],
-      "groupName": "ArmoniK"
-    },
-    {
-      "matchManagers": [
-        "github-actions",
-        "terraform",
-        "npm"
-      ],
-      "groupName": "{{manager}}"
-    }
-  ]
+  "packageRules": []
 }
