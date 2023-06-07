@@ -3,7 +3,8 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommitTypeAll(chore)",
+    "helpers:pinGitHubActionDigests"
   ],
   "rangeStrategy": "bump",
   "npm": {
@@ -18,10 +19,17 @@
       ]
     },
     {
-      "groupName": "terraform module",
+      "groupName": "terraform modules",
       "groupSlug": "terraform-module",
       "matchDatasources": [
         "terraform-module"
+      ]
+    },
+    {
+      "groupName": "terraform provides",
+      "groupSlug": "terraform-provider",
+      "matchDatasources": [
+        "terraform-provider"
       ]
     },
     {
