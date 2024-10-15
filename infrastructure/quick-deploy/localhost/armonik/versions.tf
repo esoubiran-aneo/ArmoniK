@@ -2,31 +2,31 @@ terraform {
   required_providers {
     pkcs12 = {
       source  = "chilicat/pkcs12"
-      version = "~> 0.0.7"
+      version = "~> 0.2.5"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.13.0"
+      version = "~> 2.33.0"
     }
     external = {
       source  = "hashicorp/external"
-      version = "~> 2.1.1"
+      version = "~> 2.3.4"
     }
     null = {
       source  = "hashicorp/null"
-      version = "~> 3.1.0"
+      version = "~> 3.2.3"
     }
     random = {
       source  = "hashicorp/random"
-      version = "~> 3.4.3"
+      version = "~> 3.6.3"
     }
     local = {
       source  = "hashicorp/local"
-      version = "~> 2.2.2"
+      version = "~> 2.5.2"
     }
     tls = {
       source  = "hashicorp/tls"
-      version = "~> 4.0.4"
+      version = "~> 4.0.6"
     }
   }
 }
