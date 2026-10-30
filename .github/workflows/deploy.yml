@@ -64,14 +64,14 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
       - name: Install Dependencies
-        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            docker: true
            terraform: true
            k3s: true
            aws: true 
       - name: Deploy
-        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
           type: localhost
       - name: Test ping AdminGUI
@@ -104,7 +104,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
       - name: Destroy deployment
-        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            type: localhost  
 
@@ -128,14 +128,14 @@ jobs:
             TAG=$(cat versions.tfvars.json | jq -r '.armonik_versions.core')
             echo "tag=$TAG" >> $GITHUB_OUTPUT
       - name: Install Dependencies
-        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            docker: true
            terraform: true
            k3s: true
            aws: true
       - name: Deploy
-        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            type: localhost
       - name: Test Core Stream
@@ -168,7 +168,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
       - name: Destroy deployment
-        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            type: localhost
 
@@ -192,14 +192,14 @@ jobs:
             TAG=$(cat versions.tfvars.json | jq -r '.armonik_versions.core')
             echo "tag=$TAG" >> $GITHUB_OUTPUT
       - name: Install Dependencies
-        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
             docker: true
             terraform: true
             k3s: true
             aws: true 
       - name: Deploy
-        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
            type: localhost
       - name: Test HTC Mock
@@ -291,7 +291,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
       - name: Destroy deployment
-        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
                type: localhost
 
@@ -317,14 +317,14 @@ jobs:
             TAG=$(cat versions.tfvars.json | jq -r '.armonik_versions.core')
             echo "tag=$TAG" >> $GITHUB_OUTPUT
       - name: Install Dependencies
-        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
                docker: true
                terraform: true
                k3s: true
                aws: true 
       - name: Deploy
-        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
             type: localhost  
       - name: Test Bench - many tasks (200)
@@ -396,7 +396,7 @@ jobs:
              AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
              AWS_EC2_METADATA_DISABLED: true
       - name: Destroy deployment
-        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/destroy@4e5c5c1da3ba2c80f184083a9d7e799a14176021 # main
         with:
              type: localhost
              
