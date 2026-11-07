@@ -35,7 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Dependencies
-        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/dependencies@5c478eb7d9cb7fc9988e2b3d7cbe74c2f8162e18 # main
         with:
           aws: true
           terraform: true
@@ -45,13 +45,13 @@ jobs:
       - if: ${{ inputs.bootstrap }}
         id: bootstrap-deploy
         name: Deploy Bootstrap
-        uses: aneoconsulting/ArmoniK.Action.Deploy/bootstrap-deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/bootstrap-deploy@5c478eb7d9cb7fc9988e2b3d7cbe74c2f8162e18 # main
         with:
           type: aws
           prefix: ${{ inputs.prefix }}
       - id: deploy
         name: Deploy
-        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@main
+        uses: aneoconsulting/ArmoniK.Action.Deploy/deploy@5c478eb7d9cb7fc9988e2b3d7cbe74c2f8162e18 # main
         with:
           type: aws
           prefix: ${{ inputs.prefix }}
